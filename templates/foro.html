@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro - Prolaboral</title>
+    
+    <!-- Enlazamos la MISMA hoja de estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Iconos (de Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN (Reusada) -->
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Prolaboral">
+                <span>Prolaboral</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/#herramientas">Herramientas</a>
+                <a href="/#quienes-somos">Quiénes somos</a>
+                <a href="/#objetivo">Objetivo</a>
+                <a href="/#valores">Valores</a>
+                <a href="/#contacto" class="nav-button">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL DEL FORO -->
+    <main class="forum-page">
+        <div class="container">
+            
+            <div class="forum-header">
+                <h2>Foro de la Comunidad</h2>
+                <!-- Botón simulado: deshabilitado porque no hay base de datos -->
+                <a href="#" class="submit-button" style="opacity: 0.5; cursor: not-allowed;" title="Función no disponible en la simulación">
+                    <i class="fas fa-plus"></i> Crear Nueva Pregunta
+                </a>
+            </div>
+            
+            <div class="question-list">
+                
+                <!-- Pregunta Falsa 1 -->
+                <a href="/pregunta" class="question-item">
+                    <div class="question-text">
+                        <h3>¿Cómo sé si mi finiquito está calculado correctamente?</h3>
+                        <p>Tengo 2 años en la empresa y no estoy seguro de los montos. ¿Alguien puede ayudarme?</p>
+                    </div>
+                    <div class="question-meta">
+                        <span><i class="fas fa-comment-alt"></i> 3 Respuestas</span>
+                        <span>Por: Juan P.</span>
+                    </div>
+                </a>
+                
+                <!-- Pregunta Falsa 2 -->
+                <a href="/pregunta" class="question-item">
+                    <div class="question-text">
+                        <h3>¿Cuántos días de vacaciones me tocan por ley después de 3 años?</h3>
+                        <p>Escuché que la ley cambió. ¿Me tocan 12 o 14 días?</p>
+                    </div>
+                    <div class="question-meta">
+                        <span><i class="fas fa-comment-alt"></i> 5 Respuestas</span>
+                        <span>Por: Ana G.</span>
+                    </div>
+                </a>
+                
+                <!-- Pregunta Falsa 3 -->
+                <a href="/pregunta" class="question-item">
+                    <div class="question-text">
+                        <h3>Mi jefe no me quiere pagar el aguinaldo completo. ¿Qué hago?</h3>
+                        <p>Solo trabajé 6 meses este año y dice que no me toca nada.</p>
+                    </div>
+                    <div class="question-meta">
+                        <span><i class="fas fa-comment-alt"></i> 1 Respuesta</span>
+                        <span>Por: Luis M.</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. PIE DE PÁGINA (Reusado) -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Prolaboral. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

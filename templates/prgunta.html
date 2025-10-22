@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viendo Pregunta - Prolaboral</title>
+    
+    <!-- Enlazamos la MISMA hoja de estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Iconos (de Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN (Reusada) -->
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Prolaboral">
+                <span>Prolaboral</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/#herramientas">Herramientas</a>
+                <a href="/#quienes-somos">Quiénes somos</a>
+                <a href="/#objetivo">Objetivo</a>
+                <a href="/#valores">Valores</a>
+                <a href="/#contacto" class="nav-button">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL DE LA PREGUNTA -->
+    <main class="post-page">
+        <div class="container">
+            
+            <a href="/foro" class="back-link"><i class="fas fa-arrow-left"></i> Volver al foro</a>
+
+            <!-- La Pregunta Original -->
+            <div class="post-container">
+                <div class="post-header">
+                    <h2>¿Cómo sé si mi finiquito está calculado correctamente?</h2>
+                    <span class="post-author">Por: Juan P.</span>
+                </div>
+                <div class="post-body">
+                    <p>Tengo 2 años en la empresa y no estoy seguro de los montos. Me despidieron sin causa justificada y el cálculo que me dan se me hace muy bajo.</p>
+                    <p>¿Alguien puede ayudarme? ¿Qué debo revisar?</p>
+                </div>
+            </div>
+
+            <!-- Las Respuestas -->
+            <div class="answers-container">
+                <h3><i class="fas fa-comment-alt"></i> 3 Respuestas</h3>
+
+                <!-- Respuesta Falsa 1 -->
+                <div class="answer-item">
+                    <p>¡Hola Juan! Recuerda que deben pagarte tu parte proporcional de aguinaldo, vacaciones y prima vacacional. ¡Puedes usar la calculadora de este mismo sitio para darte una idea!</p>
+                    <span class="answer-author">Por: Administrador de Prolaboral</span>
+                </div>
+
+                <!-- Respuesta Falsa 2 -->
+                <div class="answer-item">
+                    <p>Además, si fue despido injustificado, te toca la indemnización de 3 meses de salario. Eso es aparte del finiquito.</p>
+                    <span class="answer-author">Por: Ana G.</span>
+                </div>
+
+                <!-- Respuesta Falsa 3 -->
+                <div class="answer-item">
+                    <p>A mí me pasó lo mismo. Te recomiendo ir a la PROFEDET, ellos te dan asesoría legal gratuita. No firmes nada si no estás seguro.</p>
+                    <span class="answer-author">Por: Carlos R.</span>
+                </div>
+            </div>
+            
+            <!-- Caja de respuesta Falsa (Simulada) -->
+            <div class="fake-reply-box">
+                <h3>Escribe tu respuesta</h3>
+                <textarea placeholder="Tu respuesta..." disabled></textarea>
+                <button class="submit-button" disabled title="Función no disponible en la simulación">Publicar Respuesta</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. PIE DE PÁGINA (Reusado) -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Prolaboral. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

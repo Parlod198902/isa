@@ -1,0 +1,586 @@
+/* --- Variables de Color (Marca Prolaboral) --- */
+:root {
+    --color-primario: #4a2c82; /* Morado del logo */
+    --color-secundario: #00a9e0; /* Cian del logo */
+    --color-fondo: #f8f9fa;     /* Gris muy claro */
+    --color-texto: #333;        /* Texto oscuro */
+    --color-blanco: #ffffff;
+    --sombra-profesional: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Estilos Generales --- */
+html {
+    scroll-behavior: smooth; /* Animación de scroll al hacer clic en enlaces */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Espacio para la navbar fija */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* --- 1. Barra de Navegación --- */
+.navbar {
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-profesional);
+    padding: 15px 0;
+    position: fixed; /* Fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Altura fija */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.nav-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-secundario);
+}
+
+.nav-button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.nav-links a.nav-button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* --- 2. Sección Hero --- */
+.hero {
+    height: 450px; /* Altura fija para el hero */
+    position: relative; /* Para posicionar la capa oscura */
+    background-size: cover; /* Cubre todo el espacio */
+    background-position: center; /* Centra la imagen */
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Capa oscura */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscuro semitransparente */
+    z-index: 1;
+}
+
+/* Contenido del Hero (por encima de la capa) */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px auto 30px auto;
+    max-width: 600px;
+}
+
+.hero-button {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    padding: 15px 30px;
+    border-radius: 50px; /* Botón redondeado */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+.hero-button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    transform: scale(1.05);
+}
+
+/* --- 3. Sección "Quiénes Somos" --- */
+.about-us {
+    background-color: var(--color-blanco); /* Fondo blanco */
+    padding: 80px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Para móviles */
+}
+
+.about-text {
+    flex: 1; /* Ocupa la mitad del espacio */
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1; /* Ocupa la otra mitad */
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: var(--sombra-profesional);
+}
+
+
+/* --- 4. Sección "Nuestros Valores" --- */
+.values {
+    background-color: var(--color-primario); /* Fondo morado Prolaboral */
+    color: var(--color-blanco);
+    padding: 60px 0;
+}
+
+.values h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    /* 5 columnas en desktop, se ajusta en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px;
+}
+
+.value-card {
+    /* Un morado un poco más claro que el fondo */
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--color-secundario); /* Borde Cian */
+    transition: background-color 0.3s;
+}
+
+.value-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.value-card i {
+    font-size: 2.5em;
+    color: var(--color-secundario); /* Icono en color Cian */
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+
+/* --- 5. Sección de Herramientas --- */
+.tools-grid {
+    padding: 60px 0;
+}
+
+.tools-grid h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--color-primario);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta blanca con icono */
+.tool-card {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: var(--sombra-profesional);
+    padding: 30px;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tool-icon {
+    font-size: 3em;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.tool-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: var(--color-primario);
+}
+
+.tool-card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+/* --- 6. Sección de Contacto --- */
+.contact {
+    background-color: #333;
+    color: var(--color-blanco);
+    padding: 60px 0;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form, .contact-map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h3 {
+    font-size: 2em;
+    color: var(--color-secundario);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+.submit-button {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #008bb8;
+}
+
+.contact-map iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* --- 7. Pie de Página --- */
+.footer {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    margin-left: 20px;
+    color: var(--color-fondo);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--color-secundario);
+}
+
+/* --- 8. Arreglos para la sección Objetivo --- */
+
+/* Arregla el "amontonado": */
+#objetivo {
+    background-color: var(--color-fondo); /* Usa el gris claro del fondo de la página */
+}
+
+/* Arregla la imagen "muy grande": */
+#objetivo .about-image img {
+    max-height: 450px;     /* Límite de altura */
+    object-fit: cover;     /* Recorta la imagen para que quepa, sin distorsionarla */
+    object-position: center 20%; /* Se enfoca en la parte de arriba de la foto */
+}
+
+
+
+
+/* --- 9. PÁGINA DE LA CALCULADORA --- */
+
+/* Contenedor para centrar la calculadora en la página */
+.calculator-page {
+    padding: 60px 0;
+    background-color: var(--color-fondo); /* Fondo gris claro */
+}
+
+/* La caja blanca principal de la calculadora */
+.calculator-container {
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrada */
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-profesional);
+    text-align: center;
+}
+
+.calculator-container h2 {
+    font-size: 2.5em;
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+/* --- Pestañas (Aguinaldo, Vacaciones, Finiquito) --- */
+.calc-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.calc-tab {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border: 2px solid var(--color-primario);
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calc-tab:hover {
+    background-color: rgba(74, 44, 130, 0.05); /* Morado muy claro */
+}
+
+/* Estilo de la pestaña que está seleccionada */
+.calc-tab.active {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+/* --- Formulario de Entradas --- */
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-texto);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+}
+
+/* Botón de "Calcular" */
+.calc-button {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* --- Área de Resultados --- */
+.calc-result {
+    margin-top: 30px;
+    background-color: var(--color-fondo);
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px dashed var(--color-secundario); /* Borde cian punteado */
+}
+
+.calc-result h3 {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 1.2em;
+}
+
+.calc-result p {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: var(--color-primario);
+    margin: 10px 0;
+}
+
+.calc-result small {
+    font-style: italic;
+    color: #666;
+}
+
+
+
+
+
+/* --- 10. PÁGINA DE ARCHIVOS --- */
+
+.files-page {
+    padding: 60px 0;
+    background-color: var(--color-fondo); /* Fondo gris claro */
+}
+
+.files-container {
+    max-width: 900px; /* Un poco más ancho que la calculadora */
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-profesional);
+}
+
+.files-container h2 {
+    font-size: 2.5em;
+    color: var(--color-primario);
+    margin-top: 0;
+    text-align: center;
+}
+.files-container p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Categoría de archivos (como "Formatos de Solicitud") */
+.file-category {
+    margin-bottom: 30px;
+}
+
+.file-category h3 {
+    font-size: 1.5em;
+    color: var(--color-texto);
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Cada fila de archivo individual */
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: background-color 0.3s;
+}
+
+.file-item:hover {
+    background-color: var(--color-fondo); /* Gris claro al pasar el mouse */
+}
+
+/* Icono del tipo de archivo (Word) */
+.file-icon {
+    font-size: 1.5em;
+    color: var(--color-primario); /* Morado */
+    margin-right: 15px;
+}
+
+/* Nombre del archivo */
+.file-name {
+    flex-grow: 1; /* Ocupa el espacio del medio */
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* Icono de descarga (Download) */
+.download-icon {
+    font-size: 1.3em;
+    color: var(--color-secundario); /* Cian */
+}
+
+
+
+
+

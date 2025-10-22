@@ -1,0 +1,26 @@
+  # Indica la versión de la especificación de Render
+version: "1"
+
+# Define los servicios que se desplegarán
+services:
+  # Nombre del servicio web (puedes cambiarlo)
+  - name: prolaboral-web
+    # Tipo de servicio: Aplicación Web
+    type: web
+    # Entorno de ejecución: Python 3
+    env: python
+    # Región donde se desplegará (puedes elegir otra más cercana)
+    region: oregon 
+    # Rama de GitHub que se desplegará
+    branch: main # o 'master' si usas esa por defecto
+    # Comando para instalar las dependencias
+    buildCommand: "pip install -r requirements.txt"
+    # Comando para iniciar la aplicación usando Gunicorn
+    # Le dice a Gunicorn que busque la variable 'app' dentro del archivo 'app.py'
+    startCommand: "gunicorn app:app"
+    # Configuración de las variables de entorno (si las necesitaras en el futuro)
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12 # O la versión de Python que estés usando
+      # - key: OTRA_VARIABLE
+      #   value: su_valor

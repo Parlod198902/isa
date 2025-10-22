@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Laboral - Prolaboral</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Prolaboral">
+                <span>Prolaboral</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/#herramientas">Herramientas</a>
+                <a href="/#quienes-somos">Quiénes somos</a>
+                <a href="/#objetivo">Objetivo</a>
+                <a href="/#valores">Valores</a>
+                <a href="/#contacto" class="nav-button">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="calculator-page">
+        <div class="container">
+            
+            <div class="calculator-container">
+                <h2>Calculadora Laboral</h2>
+                <p>Selecciona una opción para calcular</p>
+
+                <div class="calc-tabs">
+                    <button id="btnAguinaldo" class="calc-tab active" data-type="aguinaldo">
+                        <i class="fas fa-gifts"></i> Aguinaldo
+                    </button>
+                    <button id="btnVacaciones" class="calc-tab" data-type="vacaciones">
+                        <i class="fas fa-sun"></i> Vacaciones
+                    </button>
+                    <button id="btnFiniquito" class="calc-tab" data-type="finiquito">
+                        <i class="fas fa-file-contract"></i> Finiquito
+                    </button>
+                </div>
+
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label for="salarioMensual">Salario Mensual Bruto</label>
+                        <input type="number" id="salarioMensual" placeholder="Ej: 10000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="diasTrabajados">Días trabajados en el año</label>
+                        <input type="number" id="diasTrabajados" placeholder="Ej: 365">
+                    </div>
+
+                    <div class="form-group" id="groupDiasVacaciones" style="display: none;">
+                        <label for="diasVacaciones">Días de vacaciones por año (según antigüedad)</label>
+                        <input type="number" id="diasVacaciones" placeholder="Ej: 12">
+                    </div>
+                </div>
+
+                <button id="btnCalcular" class="submit-button calc-button">
+                    <i class="fas fa-calculator"></i> Calcular
+                </button>
+
+                <div id="calcResult" class="calc-result" style="display: none;">
+                    <h3>Tu resultado:</h3>
+                    <p id="resultText">$0.00</p>
+                    <small id="resultDisclaimer">Este es un cálculo aproximado y no reemplaza una asesoría legal.</small>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Prolaboral. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/calculadora.js') }}"></script>
+    
+</body>
+</html>

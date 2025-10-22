@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prolaboral - Derechos Digitales</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Prolaboral">
+                <span>Prolaboral</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#herramientas">Herramientas</a>
+                <a href="#quienes-somos">Quiénes somos</a>
+                <a href="#objetivo">Objetivo</a> <a href="#valores">Valores</a>
+                <a href="#contacto" class="nav-button">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('{{ url_for('static', filename='images/Head.png') }}');">
+            <div class="hero-overlay"></div> <div class="container hero-content">
+                <h1>Derechos Digitales para Trabajadores</h1>
+                <p>Te acompañamos con asesoría técnica, innovación y prácticas sostenibles.</p>
+                <a href="#herramientas" class="hero-button">Conócenos</a>
+            </div>
+        </section>
+
+        <section id="quienes-somos" class="about-us">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2>Quiénes somos</h2>
+                    <p>Somos una empresa digital dedicada a brindar información clara y accesible sobre los derechos laborales en México.</p>
+                    <p>En ProLaboral, trabajamos para que cada persona pueda comprender y aplicar la ley en su vida diaria, a través de recursos interactivos, herramientas prácticas y contenido confiable que promueve una cultura laboral más justa e informada.</p>
+                </div>
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/empleada1.jpg') }}" alt="Oficina Prolaboral">
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="valores" class="values">
+            <div class="container">
+                <h2>Nuestros valores</h2>
+                <div class="values-grid">
+                    
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovación</h3>
+                        <p>Usamos recursos interactivos y herramientas prácticas para modernizar el acceso a la información.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Compromiso social</h3>
+                        <p>Promovemos una cultura laboral más justa e informada para todos los trabajadores en México.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Calidad</h3>
+                        <p>Garantizamos contenido confiable y verificado para que puedas comprender y aplicar la ley.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Sostenibilidad</h3>
+                        <p>Fomentamos prácticas justas que aseguran un ecosistema laboral equitativo a largo plazo.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <i class="fas fa-universal-access"></i>
+                        <h3>Accesibilidad</h3>
+                        <p>Brindamos información clara y accesible para que cada persona entienda sus derechos.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+                <section id="objetivo" class="about-us"> <div class="container about-container">
+                
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/empleada2.jpg') }}" alt="Recepción Prolaboral">
+                </div>
+
+                <div class="about-text">
+                    <h2>Nuestro Objetivo</h2>
+                    <p>Nuestro objetivo es que cada persona en México pueda comprender y aplicar la ley en su vida diaria. Queremos ser el puente entre la complejidad legal y el trabajador.</p>
+                    <p>Buscamos lograr esto mediante contenido confiable y herramientas interactivas que hagan la información accesible, promoviendo así una cultura laboral más justa para todos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="herramientas" class="tools-grid">
+            <div class="container">
+                <h2>Herramientas Esenciales</h2>
+                <div class="grid-container">
+                    
+                    <a href="/archivos" class="tool-card">
+                        <i class="fas fa-folder-open tool-icon"></i>
+                        <h3>Archivos</h3>
+                        <p>Gestión de archivos</p>
+                    </a>
+                    
+                    <a href="/blog" class="tool-card">
+                        <i class="fas fa-blog tool-icon"></i>
+                        <h3>Blog</h3>
+                        <p>Blog de la empresa</p>
+                    </a>
+                    
+                    <a href="/calculadora" class="tool-card">
+                        <i class="fas fa-calculator tool-icon"></i>
+                        <h3>Calculadora</h3>
+                        <p>Herramienta de calculadora</p>
+                    </a>
+                    
+                    <a href="/foro" class="tool-card">
+                        <i class="fas fa-comments tool-icon"></i>
+                        <h3>Foro</h3>
+                        <p>Foro de la comunidad</p>
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="contact">
+            <div class="container contact-container">
+                
+                <div class="contact-form">
+                    <h3>¿Te gustaría una sesión más personalizada?</h3>
+                    <p>Rellena este formulario y un asesor se comunicará contigo.</p>
+                    <form>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        
+                        <label for="email">Dirección de correo electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        
+                        <button type="submit" class="submit-button">Enviar formulario</button>
+                    </form>
+                </div>
+                
+                <div class="contact-map">
+                    <h3>Ubicación</h3>
+                    <p>Sebastián Lerdo de Tejada 60, Centro, Minatitlán, Veracruz.</p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.280036113943!2d-94.55627918562085!3d17.99971098759363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e9b3a067a31b41%3A0x633d7b8f600b3e5a!2sSebasti%C3%A1n%20Lerdo%20de%20Tejada%2060%2C%20Centro%2C%2096700%20Minatitl%C3%A1n%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1678886498123!5m2!1ses-419!2smx" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Prolaboral. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

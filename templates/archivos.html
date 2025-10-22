@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivos y Formatos - Prolaboral</title>
+    
+    <!-- Enlazamos la MISMA hoja de estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Iconos (de Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN (La reusamos) -->
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Prolaboral">
+                <span>Prolaboral</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/#herramientas">Herramientas</a>
+                <a href="/#quienes-somos">Quiénes somos</a>
+                <a href="/#objetivo">Objetivo</a>
+                <a href="/#valores">Valores</a>
+                <a href="/#contacto" class="nav-button">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL DE LA PÁGINA DE ARCHIVOS -->
+    <main class="files-page">
+        <div class="container">
+            
+            <div class="files-container">
+                <h2>Formatos y Documentos</h2>
+                <p>Descarga los formatos y plantillas que necesitas para tus trámites laborales.</p>
+
+                <!-- Categoría 1: Formatos de Solicitud -->
+                <div class="file-category">
+                    <h3>Formatos de Solicitud</h3>
+                    
+                    <!-- Archivo para descargar -->
+                    <a href="{{ url_for('static', filename='documentos/SNE_SOLICITUD_DE_EMPLEO_PLANTILLA_PDF.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Plantilla de Solicitud de Empleo</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                    
+                    <!-- Archivo para descargar -->
+                    <a href="{{ url_for('static', filename='documentos/Carta_solicitud_de_vacaciones_ejemplo.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Ejemplo de Solicitud de Vacaciones</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+
+                <!-- Categoría 2: Cartas y Trámites -->
+                <div class="file-category">
+                    <h3>Cartas y Trámites</h3>
+
+                    <a href="{{ url_for('static', filename='documentos/Carta_Solicitud_Liquidacion_Finiquito.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Solicitud de Liquidación / Finiquito</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+
+                    <a href="{{ url_for('static', filename='documentos/CARTA DE QUEJA LABORAL.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Carta de Queja Laboral</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+
+                    <a href="{{ url_for('static', filename='documentos/CARTA DE TERMINACIÓN CONTRATO LABORAL POR MUTUO ACUERDO.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Terminación de Contrato por Mutuo Acuerdo</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+                
+                <!-- Categoría 3: Ejemplos y Constancias -->
+                <div class="file-category">
+                    <h3>Ejemplos y Constancias</h3>
+
+                    <a href="{{ url_for('static', filename='documentos/DOC-20251021-WA0119.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Ejemplo de Constancia Laboral</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                    
+                    <a href="{{ url_for('static', filename='documentos/DOC-20251021-WA0115.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Ejemplo de Carta de Recomendación</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+
+                    <a href="{{ url_for('static', filename='documentos/Recibo_de_pago_de_salario_ejemplo.docx') }}" download class="file-item">
+                        <i class="fas fa-file-word file-icon"></i>
+                        <span class="file-name">Ejemplo de Recibo de Pago</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. PIE DE PÁGINA (Lo reusamos) -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Prolaboral. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
